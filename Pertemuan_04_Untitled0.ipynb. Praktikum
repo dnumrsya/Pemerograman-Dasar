@@ -1,0 +1,206 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMSK7Kgj2vFpz053laCRjyG",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/dnumrsya/Pemerograman-Dasar/blob/main/Pertemuan_04_Untitled0.ipynb.%20Praktikum\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "_lnmAQn7cb72",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "fbb19f07-2133-403e-fec7-8c0c209ef50b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Berapa porsi makan yang Anda beli? : 14\n",
+            "Siapa Nama Pelanggan? : danu\n"
+          ]
+        }
+      ],
+      "source": [
+        "total = float(input(\"Berapa porsi makan yang Anda beli? : \"))\n",
+        "Nama = str(input(\"Siapa Nama Pelanggan? : \"))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#int\n",
+        "umur = 19\n",
+        "print(\"Umur saya %d tahun\" % umur)\n",
+        "\n",
+        "#float\n",
+        "Nilai = 85.6\n",
+        "print(\"Nilai ujian adalah %f\" % Nilai)\n",
+        "\n",
+        "# string\n",
+        "nama = \"Danu\"\n",
+        "print(\"Nama saya %s\" % nama)\n",
+        "\n",
+        "# hex\n",
+        "hex = 67\n",
+        "print(\"Bilangan 67 dalam hexadesimal adalah %x\" % hex)\n",
+        "\n",
+        "# oct\n",
+        "oct = 12\n",
+        "print(\"Bilangan 12 dalam octal adalah %o\" % oct)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rFz4eECr9Xgi",
+        "outputId": "9e034bf8-908f-4da7-a93a-b4a6b3f6c5be"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Umur saya 19 tahun\n",
+            "Nilai ujian adalah 85.600000\n",
+            "Nama saya Danu\n",
+            "Bilangan 67 dalam hexadesimal adalah 43\n",
+            "Bilangan 12 dalam octal adalah 14\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total_detik = int(input(\"Masukkan total detik: \"))\n",
+        "\n",
+        "jam = total_detik // 3600\n",
+        "sisa_detik = total_detik % 3600\n",
+        "menit = sisa_detik // 60\n",
+        "detik = sisa_detik % 60\n",
+        "\n",
+        "print(f\"Hasil Konversi: {jam} Jam, {menit} Menit, {detik} Detik\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B6RWN7-_Auaq",
+        "outputId": "8086aff4-ba33-4f12-9c9e-d3b6004fa5fb"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan total detik: 3661\n",
+            "Hasil Konversi: 1 Jam, 1 Menit, 1 Detik\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tugas = int(input(\"Masukkan nilai Tugas: \"))\n",
+        "uts = int(input(\"Masukkan nilai UTS: \"))\n",
+        "uas = int(input(\"Masukkan nilai UAS: \"))\n",
+        "kuis = int(input(\"Masukkan nilai Kuis: \"))\n",
+        "proyek = int(input(\"Masukkan nilai Proyek: \"))\n",
+        "\n",
+        "nilai_mahasiswa = (tugas * 0.3) + (uts * 0.3) + (uas * 0.4) + (kuis * 0.2) + (proyek * 0.4)\n",
+        "\n",
+        "standard_kelulusan = int(input(\"Masukkan standar kelulusan: \"))\n",
+        "\n",
+        "apakah_lulus = nilai_mahasiswa >= standard_kelulusan\n",
+        "perlu_remidial = nilai_mahasiswa < standard_kelulusan\n",
+        "\n",
+        "print(f\"Nilai Mahasiswa: {nilai_mahasiswa}\")\n",
+        "print(f\"Standar Kelulusan: {standard_kelulusan}\")\n",
+        "print(f\"Apakah Mahasiswa Lulus? {apakah_lulus}\")\n",
+        "print(f\"Perlu Remidial? {perlu_remidial}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ctvNaXD1CTZN",
+        "outputId": "b87a921b-5036-4e0b-dbdd-8c8b25b65c80"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan nilai Tugas: 85\n",
+            "Masukkan nilai UTS: 75\n",
+            "Masukkan nilai UAS: 80\n",
+            "Masukkan nilai Kuis: 80\n",
+            "Masukkan nilai Proyek: 85\n",
+            "Masukkan standar kelulusan: 75\n",
+            "Nilai Mahasiswa: 130.0\n",
+            "Standar Kelulusan: 75\n",
+            "Apakah Mahasiswa Lulus? True\n",
+            "Perlu Remidial? False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "belanja = int(input(\"Masukkan total belanja: \"))\n",
+        "diskon = (0, 0.35 * belanja)[belanja > 1000000]\n",
+        "total_harga = belanja - diskon\n",
+        "print(\"Harga setelah diskon =\", total_harga)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-OcGY8XWDgwQ",
+        "outputId": "9d1e732d-a846-47e7-bc60-b9b3474dc1ed"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan total belanja: 1500000\n",
+            "Harga setelah diskon = 975000.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
